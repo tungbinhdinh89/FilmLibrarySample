@@ -36,7 +36,7 @@
             txtTitle = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            txtIMDB = new TextBox();
+            txtIMDBRating = new TextBox();
             label6 = new Label();
             txtGenre = new TextBox();
             label7 = new Label();
@@ -45,7 +45,7 @@
             txtActors = new TextBox();
             rtxtDescription = new RichTextBox();
             btnSave = new Button();
-            button1 = new Button();
+            btnSearch = new Button();
             SuspendLayout();
             // 
             // txtIMDBSearch
@@ -111,16 +111,16 @@
             label5.AutoSize = true;
             label5.Location = new Point(424, 96);
             label5.Name = "label5";
-            label5.Size = new Size(52, 23);
+            label5.Size = new Size(106, 23);
             label5.TabIndex = 9;
-            label5.Text = "IMDB";
+            label5.Text = "IMDB Rating";
             // 
-            // txtIMDB
+            // txtIMDBRating
             // 
-            txtIMDB.Location = new Point(424, 134);
-            txtIMDB.Name = "txtIMDB";
-            txtIMDB.Size = new Size(168, 30);
-            txtIMDB.TabIndex = 8;
+            txtIMDBRating.Location = new Point(424, 134);
+            txtIMDBRating.Name = "txtIMDBRating";
+            txtIMDBRating.Size = new Size(168, 30);
+            txtIMDBRating.TabIndex = 8;
             // 
             // label6
             // 
@@ -186,22 +186,24 @@
             btnSave.TabIndex = 17;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // button1
+            // btnSearch
             // 
-            button1.Location = new Point(424, 46);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 32);
-            button1.TabIndex = 18;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            btnSearch.Location = new Point(424, 46);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(105, 32);
+            btnSearch.TabIndex = 18;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // NewMovieForm
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(620, 775);
-            Controls.Add(button1);
+            Controls.Add(btnSearch);
             Controls.Add(btnSave);
             Controls.Add(rtxtDescription);
             Controls.Add(label8);
@@ -211,7 +213,7 @@
             Controls.Add(label6);
             Controls.Add(txtGenre);
             Controls.Add(label5);
-            Controls.Add(txtIMDB);
+            Controls.Add(txtIMDBRating);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtTitle);
@@ -236,7 +238,7 @@
         private TextBox txtTitle;
         private Label label4;
         private Label label5;
-        private TextBox txtIMDB;
+        private TextBox txtIMDBRating;
         private Label label6;
         private TextBox txtGenre;
         private Label label7;
@@ -245,6 +247,6 @@
         private TextBox txtActors;
         private RichTextBox rtxtDescription;
         private Button btnSave;
-        private Button button1;
+        private Button btnSearch;
     }
 }

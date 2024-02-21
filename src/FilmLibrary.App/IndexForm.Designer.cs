@@ -1,0 +1,103 @@
+﻿namespace FilmLibrary.App
+{
+    partial class IndexForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            ListViewItem listViewItem1 = new ListViewItem("Title");
+            ListViewItem listViewItem2 = new ListViewItem("Rating");
+            ListViewItem listViewItem3 = new ListViewItem("Description");
+            ListViewItem listViewItem4 = new ListViewItem("Director");
+            ListViewItem listViewItem5 = new ListViewItem("Release date");
+            textBox1 = new TextBox();
+            btnClear = new Button();
+            lvFilmList = new ListView();
+            btnNew = new Button();
+            SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(24, 21);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(473, 30);
+            textBox1.TabIndex = 0;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(519, 21);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(105, 32);
+            btnClear.TabIndex = 1;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            // 
+            // lvFilmList
+            // 
+            lvFilmList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lvFilmList.GridLines = true;
+            lvFilmList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
+            lvFilmList.Location = new Point(24, 80);
+            lvFilmList.Name = "lvFilmList";
+            lvFilmList.Size = new Size(1190, 784);
+            lvFilmList.TabIndex = 2;
+            lvFilmList.UseCompatibleStateImageBehavior = false;
+            lvFilmList.View = View.Details;
+            // 
+            // btnNew
+            // 
+            btnNew.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnNew.Location = new Point(1109, 17);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(105, 32);
+            btnNew.TabIndex = 3;
+            btnNew.Text = "New";
+            btnNew.UseVisualStyleBackColor = true;
+            // 
+            // IndexForm
+            // 
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1239, 890);
+            Controls.Add(btnNew);
+            Controls.Add(lvFilmList);
+            Controls.Add(btnClear);
+            Controls.Add(textBox1);
+            Name = "IndexForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "IndexForm";
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TextBox textBox1;
+        private Button btnClear;
+        private ListView lvFilmList;
+        private Button btnNew;
+    }
+}

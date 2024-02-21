@@ -76,6 +76,7 @@
             btnNew.TabIndex = 3;
             btnNew.Text = "New";
             btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
             // 
             // IndexForm
             // 

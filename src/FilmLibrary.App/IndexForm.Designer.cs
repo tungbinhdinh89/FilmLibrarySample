@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("Title");
-            ListViewItem listViewItem2 = new ListViewItem("Rating");
-            ListViewItem listViewItem3 = new ListViewItem("Description");
-            ListViewItem listViewItem4 = new ListViewItem("Director");
-            ListViewItem listViewItem5 = new ListViewItem("Release date");
-            textBox1 = new TextBox();
+            ListViewItem listViewItem6 = new ListViewItem("Title");
+            ListViewItem listViewItem7 = new ListViewItem("Rating");
+            ListViewItem listViewItem8 = new ListViewItem("Description");
+            ListViewItem listViewItem9 = new ListViewItem("Director");
+            ListViewItem listViewItem10 = new ListViewItem("Release date");
+            txtSearch = new TextBox();
             btnClear = new Button();
             lvFilmList = new ListView();
             btnNew = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtSearch
             // 
-            textBox1.Location = new Point(24, 21);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(473, 30);
-            textBox1.TabIndex = 0;
+            txtSearch.Location = new Point(24, 21);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(473, 30);
+            txtSearch.TabIndex = 0;
+            txtSearch.KeyPress += txtSearch_KeyPress;
             // 
             // btnClear
             // 
@@ -54,12 +55,13 @@
             btnClear.TabIndex = 1;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // lvFilmList
             // 
             lvFilmList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lvFilmList.GridLines = true;
-            lvFilmList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
+            lvFilmList.Items.AddRange(new ListViewItem[] { listViewItem6, listViewItem7, listViewItem8, listViewItem9, listViewItem10 });
             lvFilmList.Location = new Point(24, 80);
             lvFilmList.Name = "lvFilmList";
             lvFilmList.Size = new Size(1190, 784);
@@ -86,17 +88,18 @@
             Controls.Add(btnNew);
             Controls.Add(lvFilmList);
             Controls.Add(btnClear);
-            Controls.Add(textBox1);
+            Controls.Add(txtSearch);
             Name = "IndexForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "IndexForm";
+            Text = "Film Library | ver 1.0";
+            Load += IndexForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtSearch;
         private Button btnClear;
         private ListView lvFilmList;
         private Button btnNew;

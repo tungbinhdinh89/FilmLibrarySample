@@ -21,5 +21,20 @@ namespace FilmLibrary.App
         {
             new NewMovieForm().ShowDialog();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void IndexForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

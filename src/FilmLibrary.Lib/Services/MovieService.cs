@@ -6,8 +6,6 @@ namespace FilmLibrary.Lib.Services
     {
         Task<MovieModel[]> SearchMoviesAsync(string? keyword = null);
         Task AddNewMovieAsync(MovieModel movie);
-
-
     }
 
     public class MovieService : IMovieService
